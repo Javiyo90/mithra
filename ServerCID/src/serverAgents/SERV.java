@@ -10,6 +10,7 @@ import com.eclipsesource.json.JsonObject;
 import com.eclipsesource.json.JsonValue;
 import es.upv.dsic.gti_ia.core.ACLMessage;
 import es.upv.dsic.gti_ia.core.AgentID;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import myagent.MyAgent;
@@ -212,21 +213,22 @@ public class SERV extends MyAgent{
                                 SubscribedAgent sa = sshConversations.getSubscribedAgent(sshConversations.size()-1); //The last one
                                 sa.generateConversationID();
                                 sa.setIp(ip);
+
                                 
                                 //Creating the message
                                 message = new JsonObject();
 
                                 message.add("subscribe", "OK");
-
+                                
                                 //Sending the message
-                                this.sendMessage(messageReceived.getSender(), 
-                                                            ACLMessage.INFORM, 
-                                                            message.toString(),
-                                                            sa.getConversationID());
+                                this.sendMessage(messageReceived.getSender(), ACLMessage.INFORM, message.toString(), sa.getConversationID());
 
                                 dlogger.AddObject(logMessage("\"status\":\"Agent "+messageReceived.getSender().name+" with IP "+ip
-                                        +" is now subscribed to this server in the SSH agents list\""));
+                                                   +" is now subscribed to this server in the SSH agents list\""));
+                                
+                                
                             }
+       
                         }
                         else{
                                 //Creating the message
@@ -629,4 +631,6 @@ public class SERV extends MyAgent{
             }
         }
     }
+    
+    
 }

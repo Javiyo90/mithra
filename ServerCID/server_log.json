@@ -1,0 +1,19 @@
+{"date":"14/10/2018_18:45:17", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"14/10/2018_18:45:17", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"14/10/2018_18:48:44", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 is now subscribed to this server in the SSH agents list"}}}
+{"date":"14/10/2018_18:48:45", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 successfully cancelled the subscription to this server in the SSH agents list"}}}
+{"date":"14/10/2018_18:49:46", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 is now subscribed to this server in the SSH agents list"}}}
+{"date":"14/10/2018_18:49:47", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 successfully cancelled the subscription to this server in the SSH agents list"}}}
+{"date":"14/10/2018_18:57:47", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 is now subscribed to this server in the SSH agents list"}}}
+{"date":"14/10/2018_18:57:48", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 successfully cancelled the subscription to this server in the SSH agents list"}}}
+{"date":"14/10/2018_19:04:54", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 is now subscribed to this server in the SSH agents list"}}}
+{"date":"14/10/2018_19:04:55", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 successfully cancelled the subscription to this server in the SSH agents list"}}}
+{"date":"14/10/2018_19:05:22", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.134 is now subscribed to this server in the SSH agents list"}}}
+{"date":"24/10/2018_18:54:41", "value":{"agent":"localhost", "content":{"status":"Starting"}}}
+{"date":"24/10/2018_18:54:41", "value":{"agent":"localhost", "content":{"status":"Executing"}}}
+{"date":"24/10/2018_18:57:57", "value":{"agent":"localhost", "content":{"status":"Starting"}}}
+{"date":"24/10/2018_18:57:57", "value":{"agent":"localhost", "content":{"status":"Executing"}}}
+{"date":"24/10/2018_19:02:57", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"24/10/2018_19:02:57", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"24/10/2018_19:05:41", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"24/10/2018_19:05:41", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}

@@ -124,6 +124,7 @@ public class IpLogger {
         
         try{
             //First we write the aux file
+            System.out.println("primera sangre: "+modified);
             File tempFile = new File(auxFilename);
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
@@ -135,18 +136,32 @@ public class IpLogger {
 
                 writer.newLine();
             }
-
+            System.out.println("segunda sangre: "+modified);
+            
+            
+            
+            
             //Then, we rename the file
-            File file = new File(filename);
-            modified = tempFile.renameTo(file);
-
             writer.close();
+
+
+            
+            
+            
+            
+            File file = new File(filename);
+            //modified = tempFile.renameTo(file); //y esta es la puta linea que da fallo en windows de los cojones
+            
+            modified = renameFile(auxFilename,filename);
+            System.out.println("tercera sangre: "+modified);
+            //IBA AQUI XD
+            System.out.println("cuarta sangre: "+modified);
         }
         catch(IOException e){
             System.err.println("ERROOOOOOORRRRR");
             modified = false;
         }
-        
+        System.out.println("BOOLEAN MODIFIED: "+modified);
         return modified;
     }
     
@@ -241,18 +256,20 @@ public class IpLogger {
         ArrayList<ArrayList<String>> content = getContent();
         
         int row = findIP(ip);
+        System.out.println("FILA: " +row);
         if(row == -1){
             ArrayList<String> ipName = new ArrayList<String>();
             ipName.add(ip);
             ipName.add(date);
             content.add(ipName);
+            System.out.println("IP: " + ip + "DATE: "+ date);
         }
         else{
             content.get(row).add(date);
         }
-        
+        System.out.println("HASTA AQUI VA ADDREGISTRY ANTES DE MODIFYCONTENT");
         added = modifyContent(content);
-        
+        System.out.println("BOoleaN: "+added);
         return added;
     }
     
@@ -285,5 +302,30 @@ public class IpLogger {
             ip = content.get(index).get(0);
         
         return ip;
+    }
+    
+    
+    public static boolean renameFile(String oldName, String newName) throws IOException {
+        File srcFile = new File(oldName);
+        boolean bSucceeded = false;
+        
+        try {
+            File destFile = new File(newName);
+            if (destFile.exists()) {
+                if (!destFile.delete()) {
+                    throw new IOException(oldName + " was not successfully renamed to " + newName); 
+                }
+            }
+            if (!srcFile.renameTo(destFile))        {
+                throw new IOException(oldName + " was not successfully renamed to " + newName);
+            } else {
+                    bSucceeded = true;
+            }
+        } finally {
+              if (bSucceeded) {
+                    srcFile.delete();
+              }
+        }
+        return bSucceeded;
     }
 }

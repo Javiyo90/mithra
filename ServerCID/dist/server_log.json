@@ -1,0 +1,17 @@
+{"date":"03/12/2018_12:19:24", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"03/12/2018_12:19:24", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"03/12/2018_12:19:44", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.136 is now subscribed to this server in the SSH agents list"}}}
+{"date":"05/12/2018_11:11:06", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"05/12/2018_11:11:06", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"05/12/2018_11:19:56", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.135 is now subscribed to this server in the SSH agents list"}}}
+{"date":"05/12/2018_11:25:15", "value":{"agent":"Localhost", "content":{"status":"Agent prueba2 with IP 192.168.1.133 is now subscribed to this server in the SSH agents list"}}}
+{"date":"05/12/2018_11:28:24", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.135 is now subscribed to this server in the SSH agents list"}}}
+{"date":"05/12/2018_12:12:54", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"05/12/2018_12:12:54", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"05/12/2018_12:13:25", "value":{"agent":"Localhost", "content":{"status":"Agent prueba2 with IP 192.168.1.133 is now subscribed to this server in the SSH agents list"}}}
+{"date":"05/12/2018_12:14:09", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.135 is now subscribed to this server in the SSH agents list"}}}
+{"date":"06/12/2018_17:45:12", "value":{"agent":"Localhost", "content":{"status":"Starting"}}}
+{"date":"06/12/2018_17:45:12", "value":{"agent":"Localhost", "content":{"status":"Executing"}}}
+{"date":"06/12/2018_17:46:02", "value":{"agent":"Localhost", "content":{"status":"Agent prueba with IP 192.168.1.135 is now subscribed to this server in the SSH agents list"}}}
+{"date":"06/12/2018_17:47:04", "value":{"agent":"Localhost", "content":{"status":"Agent prueba2 with IP 192.168.1.133 is now subscribed to this server in the SSH agents list"}}}
+{"date":"06/12/2018_17:51:50", "value":{"agent":"Localhost", "content":{"status":"Agent prueba2 with IP 192.168.1.133 is now subscribed to this server in the SSH agents list"}}}

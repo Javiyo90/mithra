@@ -28,8 +28,9 @@ public class InitAgents {
             password =      "",
             sshagent =      "",
             serveragent =   "ServerAgent",
-            sshfilename =   "/var/log/auth.log",
-            sshlog =        "sshagent_log.json";
+            sshlog =        "sshagent_log.json",
+            os =            "",
+            version =       "";
         int port =          6000,
             seconds =       300,
             attempts =      5,
@@ -69,18 +70,18 @@ public class InitAgents {
                 serveragent = Config.config.get("servername").asString();
             if (Config.config.get("seconds")!=null)
                 seconds = Config.config.get("seconds").asInt();
-            if (Config.config.get("seconds")!=null)
-                seconds = Config.config.get("seconds").asInt();
             if (Config.config.get("lines")!=null)
                 lines = Config.config.get("lines").asInt();
-            if (Config.config.get("authlogfilename")!=null)
-                sshfilename = Config.config.get("authlogfilename").asString();
             if (Config.config.get("sshlog")!=null)
                 sshlog = Config.config.get("sshlog").asString();
             if (Config.config.get("sshagent")!=null)
                 sshagent = Config.config.get("sshagent").asString();
             if (Config.config.get("attempts")!=null)
                 attempts = Config.config.get("attempts").asInt();
+            
+            
+            os= System.getProperty("os.name").toLowerCase();
+            version=System.getProperty("os.version").toLowerCase();
         }
         
         //Creating the logs
@@ -102,7 +103,7 @@ public class InitAgents {
         // We try to initialize and start the device agents
         try {
             if(!sshagent.equals("")){
-                SSH sshAgent = new SSH(new AgentID(sshagent),new AgentID(serveragent), dlogger, sshfilename, seconds, attempts, lines);
+                SSH sshAgent = new SSH(new AgentID(sshagent),new AgentID(serveragent), dlogger, seconds, attempts, lines, os, version);
                 sshAgent.start();
             }
 

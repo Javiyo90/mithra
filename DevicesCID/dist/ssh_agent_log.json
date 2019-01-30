@@ -1,0 +1,10 @@
+{"date":"22/12/2018_14:54:58", "value":"Connect succesfull with Magentix Server in 192.168.1.136[5672] <test>"}
+{"date":"22/12/2018_14:54:59", "value":{"agent":"prueba", "content":{"status":"Starting"}}}
+{"date":"22/12/2018_14:54:59", "value":{"agent":"prueba", "content":{"status":"Executing"}}}
+{"date":"22/12/2018_14:54:59", "value":{"agent":"prueba", "content":{"status":"Subscribing successful with the server Localhost"}}}
+{"date":"22/12/2018_14:54:59", "value":{"agent":"prueba", "content":{"status":"Ruta C:\ProgramData\ssh\logs\sshd.log"}}}
+{"date":"22/12/2018_14:55:59", "value":{"agent":"prueba", "content":{"status":"Ruta C:\ProgramData\ssh\logs\sshd.log"}}}
+{"date":"22/12/2018_14:56:00", "value":{"agent":"prueba", "content":{"status":"Successful sending IPs to the server agent Localhost"}}}
+{"date":"22/12/2018_14:57:00", "value":{"agent":"prueba", "content":{"status":"Ruta C:\ProgramData\ssh\logs\sshd.log"}}}
+{"date":"22/12/2018_14:58:00", "value":{"agent":"prueba", "content":{"status":"Ruta C:\ProgramData\ssh\logs\sshd.log"}}}
+{"date":"22/12/2018_14:59:00", "value":{"agent":"prueba", "content":{"status":"Ruta C:\ProgramData\ssh\logs\sshd.log"}}}

@@ -1,0 +1,280 @@
+11104 2018-09-28 13:19:20.821 Server listening on :: port 22.
+11104 2018-09-28 13:19:20.822 Server listening on 0.0.0.0 port 22.
+5652 2018-12-11 19:25:48.012 Server listening on :: port 22.
+5652 2018-12-11 19:25:48.012 Server listening on 0.0.0.0 port 22.
+5652 2018-12-11 21:55:24.574 Received signal 8; terminating.
+4636 2018-12-12 17:26:07.757 Server listening on :: port 22.
+4636 2018-12-12 17:26:07.757 Server listening on 0.0.0.0 port 22.
+4636 2018-12-12 19:00:07.475 Received signal 8; terminating.
+3620 2018-12-12 20:10:36.224 Server listening on :: port 22.
+3620 2018-12-12 20:10:36.224 Server listening on 0.0.0.0 port 22.
+3620 2018-12-12 20:15:42.579 Received signal 8; terminating.
+4824 2018-12-13 12:02:02.125 Server listening on :: port 22.
+4824 2018-12-13 12:02:02.125 Server listening on 0.0.0.0 port 22.
+7268 2018-12-13 12:14:45.744 Accepted password for javier from 192.168.1.138 port 41932 ssh2
+3088 2018-12-13 12:14:52.402 Received disconnect from 192.168.1.138 port 41932:11: disconnected by user
+3088 2018-12-13 12:14:52.402 Disconnected from 192.168.1.138 port 41932
+12504 2018-12-13 12:14:56.580 Failed password for javier from 192.168.1.138 port 41934 ssh2
+12504 2018-12-13 12:14:57.921 Failed password for javier from 192.168.1.138 port 41934 ssh2
+12504 2018-12-13 12:14:58.794 Failed password for javier from 192.168.1.138 port 41934 ssh2
+12504 2018-12-13 12:14:58.795 Connection closed by authenticating user javier 192.168.1.138 port 41934 [preauth]
+4824 2018-12-13 13:06:39.853 Received signal 8; terminating.
+4876 2018-12-18 10:32:06.705 Server listening on :: port 22.
+4876 2018-12-18 10:32:06.711 Server listening on 0.0.0.0 port 22.
+4876 2018-12-18 11:47:40.781 Received signal 8; terminating.
+4800 2018-12-18 11:48:29.187 Server listening on :: port 22.
+4800 2018-12-18 11:48:29.187 Server listening on 0.0.0.0 port 22.
+14140 2018-12-18 11:58:49.976 error: DsGetDcNameW() failed with error: 1355 \n
+14140 2018-12-18 11:58:49.976 Invalid user javieru from 192.168.1.136 port 46820
+14140 2018-12-18 11:58:51.900 Failed password for invalid user javieru from 192.168.1.136 port 46820 ssh2
+14140 2018-12-18 11:58:52.633 Failed password for invalid user javieru from 192.168.1.136 port 46820 ssh2
+14140 2018-12-18 11:58:53.241 Failed password for invalid user javieru from 192.168.1.136 port 46820 ssh2
+14140 2018-12-18 11:58:53.242 Connection closed by invalid user javieru 192.168.1.136 port 46820 [preauth]
+4800 2018-12-18 13:14:47.695 Received signal 8; terminating.
+4748 2018-12-19 12:46:55.633 Server listening on :: port 22.
+4748 2018-12-19 12:46:55.633 Server listening on 0.0.0.0 port 22.
+4748 2018-12-19 14:00:26.635 Received signal 8; terminating.
+4868 2018-12-19 15:54:14.049 Server listening on :: port 22.
+4868 2018-12-19 15:54:14.065 Server listening on 0.0.0.0 port 22.
+4868 2018-12-19 16:34:29.208 Received signal 8; terminating.
+5020 2018-12-19 17:32:40.347 Server listening on :: port 22.
+5020 2018-12-19 17:32:40.347 Server listening on 0.0.0.0 port 22.
+5020 2018-12-19 21:04:29.674 Received signal 8; terminating.
+5040 2018-12-20 10:33:39.167 Server listening on :: port 22.
+5040 2018-12-20 10:33:39.167 Server listening on 0.0.0.0 port 22.
+5040 2018-12-20 11:46:27.002 Received signal 8; terminating.
+3684 2018-12-20 14:34:00.726 Server listening on :: port 22.
+3684 2018-12-20 14:34:00.726 Server listening on 0.0.0.0 port 22.
+2980 2018-12-20 15:25:22.047 Failed password for javier from 192.168.1.136 port 60916 ssh2
+2980 2018-12-20 15:25:24.371 Accepted password for javier from 192.168.1.136 port 60916 ssh2
+3844 2018-12-20 15:25:26.573 Received disconnect from 192.168.1.136 port 60916:11: disconnected by user
+3844 2018-12-20 15:25:26.573 Disconnected from 192.168.1.136 port 60916
+11956 2018-12-20 15:25:34.179 Failed password for javier from 192.168.1.136 port 60918 ssh2
+11956 2018-12-20 15:25:35.174 Failed password for javier from 192.168.1.136 port 60918 ssh2
+11956 2018-12-20 15:25:35.996 Failed password for javier from 192.168.1.136 port 60918 ssh2
+11956 2018-12-20 15:25:35.996 Connection closed by authenticating user javier 192.168.1.136 port 60918 [preauth]
+10312 2018-12-20 15:25:45.146 Connection closed by authenticating user javier 192.168.1.136 port 60920 [preauth]
+6196 2018-12-20 15:25:49.780 error: DsGetDcNameW() failed with error: 1355 \n
+6196 2018-12-20 15:25:49.780 Invalid user javieru from 192.168.1.136 port 60922
+6196 2018-12-20 15:25:51.067 Failed password for invalid user javieru from 192.168.1.136 port 60922 ssh2
+6196 2018-12-20 15:25:52.303 Failed password for invalid user javieru from 192.168.1.136 port 60922 ssh2
+6196 2018-12-20 15:25:53.252 Failed password for invalid user javieru from 192.168.1.136 port 60922 ssh2
+6196 2018-12-20 15:25:53.253 Connection closed by invalid user javieru 192.168.1.136 port 60922 [preauth]
+10272 2018-12-20 16:08:36.653 Connection closed by authenticating user javier 192.168.1.136 port 60940 [preauth]
+3764 2018-12-20 16:28:36.303 Failed password for javier from 192.168.1.138 port 38904 ssh2
+3764 2018-12-20 16:28:37.356 Failed password for javier from 192.168.1.138 port 38904 ssh2
+3764 2018-12-20 16:28:38.379 Failed password for javier from 192.168.1.138 port 38904 ssh2
+3764 2018-12-20 16:28:38.380 Connection closed by authenticating user javier 192.168.1.138 port 38904 [preauth]
+2712 2018-12-20 16:28:40.772 Failed password for javier from 192.168.1.138 port 38906 ssh2
+2712 2018-12-20 16:28:41.682 Failed password for javier from 192.168.1.138 port 38906 ssh2
+2712 2018-12-20 16:28:42.487 Failed password for javier from 192.168.1.138 port 38906 ssh2
+2712 2018-12-20 16:28:42.488 Connection closed by authenticating user javier 192.168.1.138 port 38906 [preauth]
+12108 2018-12-20 16:28:44.652 Failed password for javier from 192.168.1.138 port 38908 ssh2
+12108 2018-12-20 16:28:45.547 Failed password for javier from 192.168.1.138 port 38908 ssh2
+12108 2018-12-20 16:28:46.405 Failed password for javier from 192.168.1.138 port 38908 ssh2
+12108 2018-12-20 16:28:46.406 Connection closed by authenticating user javier 192.168.1.138 port 38908 [preauth]
+6216 2018-12-20 16:28:48.292 Failed password for javier from 192.168.1.138 port 39050 ssh2
+6216 2018-12-20 16:28:49.295 Failed password for javier from 192.168.1.138 port 39050 ssh2
+6216 2018-12-20 16:28:50.167 Failed password for javier from 192.168.1.138 port 39050 ssh2
+6216 2018-12-20 16:28:50.168 Connection closed by authenticating user javier 192.168.1.138 port 39050 [preauth]
+13928 2018-12-20 16:28:51.994 Failed password for javier from 192.168.1.138 port 39070 ssh2
+13928 2018-12-20 16:28:52.945 Failed password for javier from 192.168.1.138 port 39070 ssh2
+13928 2018-12-20 16:28:53.830 Failed password for javier from 192.168.1.138 port 39070 ssh2
+13928 2018-12-20 16:28:53.830 Connection closed by authenticating user javier 192.168.1.138 port 39070 [preauth]
+5800 2018-12-20 16:28:55.836 Failed password for javier from 192.168.1.138 port 39072 ssh2
+5800 2018-12-20 16:28:56.797 Failed password for javier from 192.168.1.138 port 39072 ssh2
+5800 2018-12-20 16:28:57.756 Failed password for javier from 192.168.1.138 port 39072 ssh2
+5800 2018-12-20 16:28:57.757 Connection closed by authenticating user javier 192.168.1.138 port 39072 [preauth]
+4840 2018-12-20 16:29:00.323 Failed password for javier from 192.168.1.138 port 39074 ssh2
+4840 2018-12-20 16:29:01.288 Failed password for javier from 192.168.1.138 port 39074 ssh2
+4840 2018-12-20 16:29:02.141 Failed password for javier from 192.168.1.138 port 39074 ssh2
+4840 2018-12-20 16:29:02.142 Connection closed by authenticating user javier 192.168.1.138 port 39074 [preauth]
+12064 2018-12-20 16:29:04.060 Failed password for javier from 192.168.1.138 port 39076 ssh2
+12064 2018-12-20 16:29:05.086 Failed password for javier from 192.168.1.138 port 39076 ssh2
+12064 2018-12-20 16:29:06.038 Failed password for javier from 192.168.1.138 port 39076 ssh2
+12064 2018-12-20 16:29:06.039 Connection closed by authenticating user javier 192.168.1.138 port 39076 [preauth]
+2068 2018-12-20 17:14:52.092 Failed password for javier from 192.168.1.138 port 52382 ssh2
+2068 2018-12-20 17:14:52.854 Failed password for javier from 192.168.1.138 port 52382 ssh2
+2068 2018-12-20 17:14:53.531 Failed password for javier from 192.168.1.138 port 52382 ssh2
+2068 2018-12-20 17:14:53.532 Connection closed by authenticating user javier 192.168.1.138 port 52382 [preauth]
+1412 2018-12-20 17:14:55.575 Failed password for javier from 192.168.1.138 port 52384 ssh2
+1412 2018-12-20 17:14:56.255 Failed password for javier from 192.168.1.138 port 52384 ssh2
+1412 2018-12-20 17:14:56.898 Failed password for javier from 192.168.1.138 port 52384 ssh2
+1412 2018-12-20 17:14:56.899 Connection closed by authenticating user javier 192.168.1.138 port 52384 [preauth]
+2492 2018-12-20 17:14:58.393 Failed password for javier from 192.168.1.138 port 52386 ssh2
+2492 2018-12-20 17:14:59.126 Failed password for javier from 192.168.1.138 port 52386 ssh2
+2492 2018-12-20 17:14:59.761 Failed password for javier from 192.168.1.138 port 52386 ssh2
+2492 2018-12-20 17:14:59.762 Connection closed by authenticating user javier 192.168.1.138 port 52386 [preauth]
+10560 2018-12-20 17:15:01.109 Failed password for javier from 192.168.1.138 port 52388 ssh2
+10560 2018-12-20 17:15:01.736 Failed password for javier from 192.168.1.138 port 52388 ssh2
+10560 2018-12-20 17:15:02.322 Failed password for javier from 192.168.1.138 port 52388 ssh2
+10560 2018-12-20 17:15:02.323 Connection closed by authenticating user javier 192.168.1.138 port 52388 [preauth]
+6476 2018-12-20 17:15:03.595 Failed password for javier from 192.168.1.138 port 52390 ssh2
+6476 2018-12-20 17:15:04.405 Failed password for javier from 192.168.1.138 port 52390 ssh2
+6476 2018-12-20 17:15:04.957 Failed password for javier from 192.168.1.138 port 52390 ssh2
+6476 2018-12-20 17:15:04.958 Connection closed by authenticating user javier 192.168.1.138 port 52390 [preauth]
+14332 2018-12-20 17:15:06.417 Failed password for javier from 192.168.1.138 port 52392 ssh2
+14332 2018-12-20 17:15:07.033 Failed password for javier from 192.168.1.138 port 52392 ssh2
+14332 2018-12-20 17:15:07.592 Failed password for javier from 192.168.1.138 port 52392 ssh2
+14332 2018-12-20 17:15:07.592 Connection closed by authenticating user javier 192.168.1.138 port 52392 [preauth]
+11752 2018-12-20 17:15:10.456 Failed password for javier from 192.168.1.138 port 52394 ssh2
+11752 2018-12-20 17:15:11.045 Failed password for javier from 192.168.1.138 port 52394 ssh2
+11752 2018-12-20 17:15:11.551 Failed password for javier from 192.168.1.138 port 52394 ssh2
+11752 2018-12-20 17:15:11.552 Connection closed by authenticating user javier 192.168.1.138 port 52394 [preauth]
+3684 2018-12-20 18:35:54.613 Received signal 8; terminating.
+4720 2018-12-20 18:36:27.186 Server listening on :: port 22.
+4720 2018-12-20 18:36:27.186 Server listening on 0.0.0.0 port 22.
+4720 2018-12-20 20:29:33.294 Received signal 8; terminating.
+5052 2018-12-21 10:22:21.417 Server listening on :: port 22.
+5052 2018-12-21 10:22:21.417 Server listening on 0.0.0.0 port 22.
+5052 2018-12-21 10:39:40.400 Received signal 8; terminating.
+4816 2018-12-21 11:47:01.232 Server listening on :: port 22.
+4816 2018-12-21 11:47:01.247 Server listening on 0.0.0.0 port 22.
+1352 2018-12-21 12:59:58.979 Failed password for javier from 192.168.1.138 port 55688 ssh2
+1352 2018-12-21 12:59:59.669 Failed password for javier from 192.168.1.138 port 55688 ssh2
+1352 2018-12-21 13:00:00.237 Failed password for javier from 192.168.1.138 port 55688 ssh2
+1352 2018-12-21 13:00:00.238 Connection closed by authenticating user javier 192.168.1.138 port 55688 [preauth]
+13552 2018-12-21 13:00:02.877 Failed password for javier from 192.168.1.138 port 55690 ssh2
+13552 2018-12-21 13:00:03.490 Failed password for javier from 192.168.1.138 port 55690 ssh2
+13552 2018-12-21 13:00:04.083 Failed password for javier from 192.168.1.138 port 55690 ssh2
+13552 2018-12-21 13:00:04.086 Connection closed by authenticating user javier 192.168.1.138 port 55690 [preauth]
+5460 2018-12-21 13:00:05.747 Failed password for javier from 192.168.1.138 port 55692 ssh2
+5460 2018-12-21 13:00:06.337 Failed password for javier from 192.168.1.138 port 55692 ssh2
+5460 2018-12-21 13:00:06.869 Failed password for javier from 192.168.1.138 port 55692 ssh2
+5460 2018-12-21 13:00:06.869 Connection closed by authenticating user javier 192.168.1.138 port 55692 [preauth]
+10940 2018-12-21 13:00:08.658 Failed password for javier from 192.168.1.138 port 55694 ssh2
+10940 2018-12-21 13:00:09.210 Failed password for javier from 192.168.1.138 port 55694 ssh2
+10940 2018-12-21 13:00:09.779 Failed password for javier from 192.168.1.138 port 55694 ssh2
+10940 2018-12-21 13:00:09.780 Connection closed by authenticating user javier 192.168.1.138 port 55694 [preauth]
+8672 2018-12-21 13:00:11.685 Failed password for javier from 192.168.1.138 port 55696 ssh2
+8672 2018-12-21 13:00:12.275 Failed password for javier from 192.168.1.138 port 55696 ssh2
+8672 2018-12-21 13:00:12.801 Failed password for javier from 192.168.1.138 port 55696 ssh2
+8672 2018-12-21 13:00:12.801 Connection closed by authenticating user javier 192.168.1.138 port 55696 [preauth]
+10112 2018-12-21 13:00:14.567 Failed password for javier from 192.168.1.138 port 55698 ssh2
+10112 2018-12-21 13:00:15.152 Failed password for javier from 192.168.1.138 port 55698 ssh2
+10112 2018-12-21 13:00:15.672 Failed password for javier from 192.168.1.138 port 55698 ssh2
+10112 2018-12-21 13:00:15.673 Connection closed by authenticating user javier 192.168.1.138 port 55698 [preauth]
+13576 2018-12-21 13:00:17.551 Failed password for javier from 192.168.1.138 port 55700 ssh2
+13576 2018-12-21 13:00:18.128 Failed password for javier from 192.168.1.138 port 55700 ssh2
+13576 2018-12-21 13:00:18.648 Failed password for javier from 192.168.1.138 port 55700 ssh2
+13576 2018-12-21 13:00:18.649 Connection closed by authenticating user javier 192.168.1.138 port 55700 [preauth]
+9648 2018-12-21 13:00:20.948 Failed password for javier from 192.168.1.138 port 55702 ssh2
+9648 2018-12-21 13:00:21.518 Failed password for javier from 192.168.1.138 port 55702 ssh2
+9648 2018-12-21 13:00:22.074 Failed password for javier from 192.168.1.138 port 55702 ssh2
+9648 2018-12-21 13:00:22.074 Connection closed by authenticating user javier 192.168.1.138 port 55702 [preauth]
+6768 2018-12-21 13:00:24.123 Failed password for javier from 192.168.1.138 port 55704 ssh2
+6768 2018-12-21 13:00:24.745 Failed password for javier from 192.168.1.138 port 55704 ssh2
+6768 2018-12-21 13:00:25.283 Failed password for javier from 192.168.1.138 port 55704 ssh2
+6768 2018-12-21 13:00:25.284 Connection closed by authenticating user javier 192.168.1.138 port 55704 [preauth]
+8912 2018-12-21 13:00:27.393 Failed password for javier from 192.168.1.138 port 55706 ssh2
+8912 2018-12-21 13:00:28.002 Failed password for javier from 192.168.1.138 port 55706 ssh2
+8912 2018-12-21 13:00:28.622 Failed password for javier from 192.168.1.138 port 55706 ssh2
+8912 2018-12-21 13:00:28.622 Connection closed by authenticating user javier 192.168.1.138 port 55706 [preauth]
+12932 2018-12-21 13:26:29.001 Failed password for javier from 192.168.1.138 port 55718 ssh2
+12932 2018-12-21 13:26:29.602 Failed password for javier from 192.168.1.138 port 55718 ssh2
+12932 2018-12-21 13:26:30.198 Failed password for javier from 192.168.1.138 port 55718 ssh2
+12932 2018-12-21 13:26:30.199 Connection closed by authenticating user javier 192.168.1.138 port 55718 [preauth]
+356 2018-12-21 13:26:31.923 Failed password for javier from 192.168.1.138 port 55720 ssh2
+356 2018-12-21 13:26:32.524 Failed password for javier from 192.168.1.138 port 55720 ssh2
+356 2018-12-21 13:26:33.061 Failed password for javier from 192.168.1.138 port 55720 ssh2
+356 2018-12-21 13:26:33.061 Connection closed by authenticating user javier 192.168.1.138 port 55720 [preauth]
+4816 2018-12-21 13:33:56.704 Received signal 8; terminating.
+4544 2018-12-21 15:48:15.532 Server listening on :: port 22.
+4544 2018-12-21 15:48:15.532 Server listening on 0.0.0.0 port 22.
+4544 2018-12-21 18:52:39.865 Received signal 8; terminating.
+4792 2018-12-21 21:11:49.183 Server listening on :: port 22.
+4792 2018-12-21 21:11:49.198 Server listening on 0.0.0.0 port 22.
+4792 2018-12-21 21:12:55.930 Received signal 8; terminating.
+4924 2018-12-21 21:13:33.148 Server listening on :: port 22.
+4924 2018-12-21 21:13:33.148 Server listening on 0.0.0.0 port 22.
+4924 2018-12-21 23:37:35.560 Received signal 8; terminating.
+4960 2018-12-22 12:04:46.462 Server listening on :: port 22.
+4960 2018-12-22 12:04:46.478 Server listening on 0.0.0.0 port 22.
+13852 2018-12-22 12:14:53.230 Failed password for javier from 192.168.1.138 port 55326 ssh2
+13852 2018-12-22 12:14:54.106 Failed password for javier from 192.168.1.138 port 55326 ssh2
+13852 2018-12-22 12:14:54.879 Failed password for javier from 192.168.1.138 port 55326 ssh2
+13852 2018-12-22 12:14:54.880 Connection closed by authenticating user javier 192.168.1.138 port 55326 [preauth]
+2260 2018-12-22 12:14:57.073 Failed password for javier from 192.168.1.138 port 55328 ssh2
+2260 2018-12-22 12:14:57.818 Failed password for javier from 192.168.1.138 port 55328 ssh2
+2260 2018-12-22 12:14:58.519 Failed password for javier from 192.168.1.138 port 55328 ssh2
+2260 2018-12-22 12:14:58.519 Connection closed by authenticating user javier 192.168.1.138 port 55328 [preauth]
+8732 2018-12-22 12:15:00.496 Failed password for javier from 192.168.1.138 port 55330 ssh2
+8732 2018-12-22 12:15:01.328 Failed password for javier from 192.168.1.138 port 55330 ssh2
+8732 2018-12-22 12:15:19.584 Failed password for javier from 192.168.1.138 port 55330 ssh2
+8732 2018-12-22 12:15:19.585 Connection closed by authenticating user javier 192.168.1.138 port 55330 [preauth]
+9808 2018-12-22 12:15:21.765 Failed password for javier from 192.168.1.138 port 55332 ssh2
+9808 2018-12-22 12:15:22.326 Failed password for javier from 192.168.1.138 port 55332 ssh2
+9808 2018-12-22 12:15:22.872 Failed password for javier from 192.168.1.138 port 55332 ssh2
+9808 2018-12-22 12:15:22.873 Connection closed by authenticating user javier 192.168.1.138 port 55332 [preauth]
+2440 2018-12-22 12:32:35.534 Failed password for javier from 192.168.1.138 port 55334 ssh2
+2440 2018-12-22 12:32:38.579 Failed password for javier from 192.168.1.138 port 55334 ssh2
+2440 2018-12-22 12:32:39.390 Failed password for javier from 192.168.1.138 port 55334 ssh2
+2440 2018-12-22 12:32:39.391 Connection closed by authenticating user javier 192.168.1.138 port 55334 [preauth]
+2556 2018-12-22 12:32:56.087 Failed password for javier from 192.168.1.138 port 55336 ssh2
+2556 2018-12-22 12:32:56.738 Failed password for javier from 192.168.1.138 port 55336 ssh2
+2556 2018-12-22 12:32:57.413 Failed password for javier from 192.168.1.138 port 55336 ssh2
+2556 2018-12-22 12:32:57.413 Connection closed by authenticating user javier 192.168.1.138 port 55336 [preauth]
+3768 2018-12-22 12:32:59.011 Failed password for javier from 192.168.1.138 port 55338 ssh2
+3768 2018-12-22 12:32:59.578 Failed password for javier from 192.168.1.138 port 55338 ssh2
+3768 2018-12-22 12:33:00.336 Failed password for javier from 192.168.1.138 port 55338 ssh2
+3768 2018-12-22 12:33:00.336 Connection closed by authenticating user javier 192.168.1.138 port 55338 [preauth]
+13728 2018-12-22 12:35:37.712 Failed password for javier from 192.168.1.138 port 55340 ssh2
+13728 2018-12-22 12:35:38.352 Failed password for javier from 192.168.1.138 port 55340 ssh2
+13728 2018-12-22 12:35:38.913 Failed password for javier from 192.168.1.138 port 55340 ssh2
+13728 2018-12-22 12:35:38.914 Connection closed by authenticating user javier 192.168.1.138 port 55340 [preauth]
+9448 2018-12-22 12:35:41.366 Failed password for javier from 192.168.1.138 port 55342 ssh2
+9448 2018-12-22 12:35:41.913 Failed password for javier from 192.168.1.138 port 55342 ssh2
+9448 2018-12-22 12:35:42.432 Failed password for javier from 192.168.1.138 port 55342 ssh2
+9448 2018-12-22 12:35:42.433 Connection closed by authenticating user javier 192.168.1.138 port 55342 [preauth]
+5360 2018-12-22 12:42:59.746 Failed password for javier from 192.168.1.138 port 55344 ssh2
+5360 2018-12-22 12:43:00.375 Failed password for javier from 192.168.1.138 port 55344 ssh2
+5360 2018-12-22 12:43:00.985 Failed password for javier from 192.168.1.138 port 55344 ssh2
+5360 2018-12-22 12:43:00.986 Connection closed by authenticating user javier 192.168.1.138 port 55344 [preauth]
+11984 2018-12-22 12:46:23.045 Failed password for javier from 192.168.1.138 port 55346 ssh2
+11984 2018-12-22 12:46:23.928 Failed password for javier from 192.168.1.138 port 55346 ssh2
+11984 2018-12-22 12:46:24.890 Failed password for javier from 192.168.1.138 port 55346 ssh2
+11984 2018-12-22 12:46:24.890 Connection closed by authenticating user javier 192.168.1.138 port 55346 [preauth]
+6052 2018-12-22 12:50:12.386 Failed password for javier from 192.168.1.138 port 55348 ssh2
+6052 2018-12-22 12:50:13.157 Failed password for javier from 192.168.1.138 port 55348 ssh2
+6052 2018-12-22 12:50:13.836 Failed password for javier from 192.168.1.138 port 55348 ssh2
+6052 2018-12-22 12:50:13.836 Connection closed by authenticating user javier 192.168.1.138 port 55348 [preauth]
+2108 2018-12-22 13:02:17.342 Failed password for javier from 192.168.1.138 port 55350 ssh2
+2108 2018-12-22 13:02:18.082 Failed password for javier from 192.168.1.138 port 55350 ssh2
+2108 2018-12-22 13:02:18.760 Failed password for javier from 192.168.1.138 port 55350 ssh2
+2108 2018-12-22 13:02:18.762 Connection closed by authenticating user javier 192.168.1.138 port 55350 [preauth]
+11492 2018-12-22 13:06:27.297 Failed password for javier from 192.168.1.138 port 55352 ssh2
+11492 2018-12-22 13:06:27.998 Failed password for javier from 192.168.1.138 port 55352 ssh2
+11492 2018-12-22 13:06:28.619 Failed password for javier from 192.168.1.138 port 55352 ssh2
+11492 2018-12-22 13:06:28.620 Connection closed by authenticating user javier 192.168.1.138 port 55352 [preauth]
+14244 2018-12-22 13:12:57.946 Failed password for javier from 192.168.1.138 port 55354 ssh2
+14244 2018-12-22 13:12:58.661 Failed password for javier from 192.168.1.138 port 55354 ssh2
+14244 2018-12-22 13:12:59.258 Failed password for javier from 192.168.1.138 port 55354 ssh2
+14244 2018-12-22 13:12:59.258 Connection closed by authenticating user javier 192.168.1.138 port 55354 [preauth]
+3352 2018-12-22 13:15:49.270 Failed password for javier from 192.168.1.138 port 55356 ssh2
+3352 2018-12-22 13:15:49.973 Failed password for javier from 192.168.1.138 port 55356 ssh2
+3352 2018-12-22 13:15:50.626 Failed password for javier from 192.168.1.138 port 55356 ssh2
+3352 2018-12-22 13:15:50.627 Connection closed by authenticating user javier 192.168.1.138 port 55356 [preauth]
+3172 2018-12-22 13:20:38.659 Failed password for javier from 192.168.1.138 port 55358 ssh2
+3172 2018-12-22 13:20:39.236 Failed password for javier from 192.168.1.138 port 55358 ssh2
+3172 2018-12-22 13:20:39.781 Failed password for javier from 192.168.1.138 port 55358 ssh2
+3172 2018-12-22 13:20:39.782 Connection closed by authenticating user javier 192.168.1.138 port 55358 [preauth]
+4712 2018-12-22 13:42:19.760 Failed password for javier from 192.168.1.138 port 55360 ssh2
+4712 2018-12-22 13:42:20.406 Failed password for javier from 192.168.1.138 port 55360 ssh2
+4712 2018-12-22 13:42:21.020 Failed password for javier from 192.168.1.138 port 55360 ssh2
+4712 2018-12-22 13:42:21.021 Connection closed by authenticating user javier 192.168.1.138 port 55360 [preauth]
+14216 2018-12-22 14:03:46.486 Failed password for javier from 192.168.1.138 port 55362 ssh2
+14216 2018-12-22 14:03:47.260 Failed password for javier from 192.168.1.138 port 55362 ssh2
+14216 2018-12-22 14:03:47.956 Failed password for javier from 192.168.1.138 port 55362 ssh2
+14216 2018-12-22 14:03:47.957 Connection closed by authenticating user javier 192.168.1.138 port 55362 [preauth]
+12140 2018-12-22 14:12:43.899 Failed password for javier from 192.168.1.138 port 55364 ssh2
+12140 2018-12-22 14:12:44.634 Failed password for javier from 192.168.1.138 port 55364 ssh2
+12140 2018-12-22 14:12:45.286 Failed password for javier from 192.168.1.138 port 55364 ssh2
+12140 2018-12-22 14:12:45.286 Connection closed by authenticating user javier 192.168.1.138 port 55364 [preauth]
+468 2018-12-22 14:25:57.774 Failed password for javier from 192.168.1.138 port 55370 ssh2
+468 2018-12-22 14:25:58.545 Failed password for javier from 192.168.1.138 port 55370 ssh2
+468 2018-12-22 14:25:59.313 Failed password for javier from 192.168.1.138 port 55370 ssh2
+468 2018-12-22 14:25:59.314 Connection closed by authenticating user javier 192.168.1.138 port 55370 [preauth]
+11736 2018-12-22 14:55:16.174 Failed password for javier from 192.168.1.138 port 55390 ssh2
+11736 2018-12-22 14:55:16.845 Failed password for javier from 192.168.1.138 port 55390 ssh2
+11736 2018-12-22 14:55:17.488 Failed password for javier from 192.168.1.138 port 55390 ssh2
+11736 2018-12-22 14:55:17.489 Connection closed by authenticating user javier 192.168.1.138 port 55390 [preauth]

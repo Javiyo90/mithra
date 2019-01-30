@@ -1,0 +1,11 @@
+{
+"host":"192.168.1.134",
+"virtualhost":"test",
+"username":"guest",
+"password":"guest",
+"sshlog":"ssh_attacks.log",
+"serverlog":"server_log.json",
+"servername":"Localhost",
+"port":5672,
+"ssl":false
+}
