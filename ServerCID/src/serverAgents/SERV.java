@@ -10,6 +10,7 @@ import com.eclipsesource.json.JsonObject;
 import com.eclipsesource.json.JsonValue;
 import es.upv.dsic.gti_ia.core.ACLMessage;
 import es.upv.dsic.gti_ia.core.AgentID;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import myagent.MyAgent;
@@ -19,6 +20,7 @@ import onmessage.MessageQueue;
  * Server agent class 
  * 
  * @author Aaron Rodriguez Bueno
+ * @author Javier Martínez Montilla
  */
 public class SERV extends MyAgent{
     
@@ -212,21 +214,22 @@ public class SERV extends MyAgent{
                                 SubscribedAgent sa = sshConversations.getSubscribedAgent(sshConversations.size()-1); //The last one
                                 sa.generateConversationID();
                                 sa.setIp(ip);
+
                                 
                                 //Creating the message
                                 message = new JsonObject();
 
                                 message.add("subscribe", "OK");
-
+                                
                                 //Sending the message
-                                this.sendMessage(messageReceived.getSender(), 
-                                                            ACLMessage.INFORM, 
-                                                            message.toString(),
-                                                            sa.getConversationID());
+                                this.sendMessage(messageReceived.getSender(), ACLMessage.INFORM, message.toString(), sa.getConversationID());
 
                                 dlogger.AddObject(logMessage("\"status\":\"Agent "+messageReceived.getSender().name+" with IP "+ip
-                                        +" is now subscribed to this server in the SSH agents list\""));
+                                                   +" is now subscribed to this server in the SSH agents list\""));
+                                
+                                
                             }
+       
                         }
                         else{
                                 //Creating the message
@@ -423,6 +426,9 @@ public class SERV extends MyAgent{
                     JsonArray dates;
                     JsonObject ipDates;
                     String ip;
+                    
+                    JsonValue Stix= contentMessageReceived.get("STIX");
+                    
                     ok = true;
                     
                     for(int i = 0; i < vector.size() && ok; i++){ //For every IP
@@ -452,8 +458,6 @@ public class SERV extends MyAgent{
                                 sshLog.addEntry(date.asString(), agent.getIp(), ip, "SSH attack");
                                 
                             }
-                            //dlogger.AddObject(logMessage("\"status\":\"The attacking IP "+ip+" from the agent "
-                            //        +messageReceived.getSender()+" has been registered successfully"));
                             
                         }
                     }
@@ -510,6 +514,14 @@ public class SERV extends MyAgent{
     private void statePreventSSHAttacks(){
         System.out.println("IN PREVENT SSH ATTACKS");
         
+        JsonObject Stix = new JsonObject();
+        
+        Stix.add("spec_version", "2.0");
+        Stix.add("type", "attack-pattern");
+        Stix.add("id", "attack-pattern--ddos--attack--from--ssh");
+        Stix.add("created", "2019-02-10T12:11:04.983Z");
+        Stix.add("modified", "2019-02-10T12:11:04.983Z");
+        
         try{
             SubscribedAgent sa;
             JsonObject message = new JsonObject();
@@ -527,6 +539,7 @@ public class SERV extends MyAgent{
             }
 
             message.add("block IPs", vectorToSend);
+            message.add("STIX", Stix);
 
             //Sending the message to the other SSH agents
             for(int i = 0; i < this.sshConversations.size(); i++){
@@ -629,4 +642,6 @@ public class SERV extends MyAgent{
             }
         }
     }
+    
+    
 }

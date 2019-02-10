@@ -8,6 +8,7 @@ import OccurrencesSearch.OccurrencesSearch;
 import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;
 import com.eclipsesource.json.JsonObject;
+import com.eclipsesource.json.JsonValue;
 import es.upv.dsic.gti_ia.core.ACLMessage;
 import es.upv.dsic.gti_ia.core.AgentID;
 import java.io.BufferedWriter;
@@ -32,6 +33,7 @@ import org.apache.commons.io.input.ReversedLinesFileReader;
  * Device agent class to protect against SSH attacks 
  * 
  * @author Aaron Rodriguez Bueno
+ * @author Javier Martínez Montilla
  */
 public class SSH extends MyAgent{
 
@@ -52,8 +54,10 @@ public class SSH extends MyAgent{
     private static final int PREVENT_ATTACKS = 9;
     private int state;
     
+    private final String OS;
+    private final String OSversion;
     private final AgentID server;
-    private final String authlogfilename;
+    private String authlogfilename;
     private String conversWithServer, replyWithServer;
     private boolean finish;
     
@@ -65,11 +69,12 @@ public class SSH extends MyAgent{
     private final int dimQueue = 100;
     private MessageQueue messagesQueue;
     
-    private final String ips_to_send_filename = "tmp/send_ips.tmp";
-    private final String ips_to_ban_filename = "tmp/ban_ips.tmp";
-    private final String ips_to_reallow_filename = "tmp/reallow_ips.tmp";
-    private final String tail_auth_log = "tmp/tail_auth_log.tmp";  
-    private final String wait_to_reallow_filename = "tmp/wait_to_reallow_ips.tmp";
+    //quitadas la carpeta tmp de los archivos temporales
+    private final String ips_to_send_filename = "send_ips.tmp"; 
+    private final String ips_to_ban_filename = "ban_ips.tmp";
+    private final String ips_to_reallow_filename = "reallow_ips.tmp";
+    private final String tail_auth_log = "tail_auth_log.tmp";  
+    private final String wait_to_reallow_filename = "wait_to_reallow_ips.tmp";
     
     private Calendar limit_wait_time;
     
@@ -82,21 +87,21 @@ public class SSH extends MyAgent{
      * @param agentID The name
      * @param serverID The server name
      * @param dl The DiskLogger
-     * @param sshfilename The SSH file name
      * @param seconds The seconds to check the authentication log again
      * @param attempts The number of attemps to considerate an IP as an attacker
      * @param lines The number of lines to check in the authentication log
      * @throws Exception 
      */
-    SSH(AgentID agentID, AgentID serverID, DiskLogger dl, String sshfilename, int seconds, int attempts, int lines) throws Exception {
+    SSH(AgentID agentID, AgentID serverID, DiskLogger dl, int seconds, int attempts, int lines, String os, String version) throws Exception {
         super(agentID);
         server = serverID;
         this.seconds = seconds;
         this.attempts = attempts;
         this.lines = lines;
-        this.authlogfilename = sshfilename;
         this.dlogger = dl;
         this.messagesQueue = new MessageQueue(dimQueue);
+        this.OS= os;
+        this.OSversion = version;
         System.out.println("Iniciated SSH agent "+this.getAid());
     }
 
@@ -142,6 +147,7 @@ public class SSH extends MyAgent{
                 break;
                 case RE_ALLOW_IPS:
                     try {
+                        dlogger.AddObject(logMessage("\"status\":\"Ruta "+ this.authlogfilename +"\""));
                         stateReAllowIPs();
                     } catch (IOException ex) {
                         state = CANCEL_SUBS;
@@ -265,12 +271,24 @@ public class SSH extends MyAgent{
             Thread.sleep(500);
         
         ACLMessage messageReceived = messagesQueue.Pop();
+        JsonObject contentMessageReceived = Json.parse(messageReceived.getContent()).asObject();
         
         //In function of the message, we will go to a state or to another
         if(messageReceived.getPerformativeInt() == ACLMessage.INFORM &&
                 messageReceived.getContent().contains("subscribe")){
+            
             conversWithServer = messageReceived.getConversationId();
             dlogger.AddObject(logMessage("\"status\":\"Subscribing successful with the server "+this.server.name+"\""));
+            
+            
+            String logfile= checkOS(OS, OSversion);
+            
+            if(logfile.equals("fail")){
+                dlogger.AddObject(logMessage("\"status\":\"SSH Log file "+ logfile+" not found\""));
+                state = CANCEL_SUBS;
+                return;
+            }else
+                this.setAuthlogfilename(logfile);
             
             state = CHECK_AUTH_LOG;
         }
@@ -345,39 +363,6 @@ public class SSH extends MyAgent{
         
         boolean ok = true;
         
-        /*
-        //PREVIOUS CODE, BUT SOMETIMES DOESN'T WORK WELL
-        
-        File authlog = new File(this.authlogfilename);
-        ReversedLinesFileReader reverse = new ReversedLinesFileReader(authlog);
-        boolean beginning = false;
-        String line;
-        try(FileWriter fw = new FileWriter(tail_auth_log, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw))
-        {
-            PrintWriter writer = new PrintWriter(this.tail_auth_log);
-            writer.print("");   //File now empty
-            
-            for(int i = 0; i < this.lines && !beginning; i++){
-                line = reverse.readLine();
-                if(line != null){
-                    out.println(line);
-                }
-                else{
-                    beginning = true;
-                }
-            }
-            writer.close();
-            out.close();
-            bw.close();
-            fw.close();
-        } catch (Exception e) {
-            dlogger.AddObject(logMessage("\"status\":\"Error creating/filling the file "+this.tail_auth_log+"\""));
-            //state = CANCEL_SUBS;
-            //return;   
-        }*/
-        
         //First extract the last lines of the file
         File file = new File(this.authlogfilename);
         String content = tail(file, this.lines);
@@ -411,9 +396,9 @@ public class SSH extends MyAgent{
         
         //Extracting the IP which they exceed the attempt number
         OccurrencesSearch occurrences = new OccurrencesSearch(tail_auth_log);
-        OccurrencesList attackerIPs = occurrences.searchOccurrences(attempts,seconds);
+        OccurrencesList attackerIPs = occurrences.searchOccurrences(attempts,seconds,OS);
         
-        OccurrencesList sshIPs = occurrences.searchOccurrences(1,seconds);  //For re-allowing IPs or not
+        OccurrencesList sshIPs = occurrences.searchOccurrences(1,seconds,OS);  //For re-allowing IPs or not
         
         //Deleting ban content
         IpLogger banFile = new IpLogger(this.ips_to_ban_filename);
@@ -431,38 +416,37 @@ public class SSH extends MyAgent{
             //Don't re-allow IPs that they tried to authenticate (but failed) again
             if(reallowFile.isIP(oc.getIp())){
                 ok = reallowFile.deleteIP(oc.getIp());
-                
-                if(ok)
+
+                if(ok){
                     ok = waitToReallowFile.addRegistry(oc.getIp(), oc.getDate());
-                
-                /*if(ok)
-                    ok = toSendFile.addRegistry(oc.getIp(), oc.getDate());
-                
-                if(ok)
-                    ok = banFile.addRegistry(oc.getIp(), oc.getDate());*/
+                }
             }
         }
         
         //Including IP attackers in banned and to send IPs files   
         boolean found;
         ArrayList<ArrayList<String>> contentWait = waitToReallowFile.getContent();
-        if(ok)
+        if(ok){
             for(int i = 0; i < attackerIPs.size() && ok; i++){
                 oc = attackerIPs.get(i);
                 found = false;
                 
                 //We just ban that IP if it didn't attack (to not re-ban)
                 for(int j = 0; j < contentWait.size() && !found; j++){
-                    if(contentWait.get(j).get(0).equals(oc.getIp()))
-                        found = true;
+                    if(contentWait.get(j).get(0).equals(oc.getIp())){
+                        found = true;   
+                    }
+                        
                 }
-                if(!found)
+                if(!found){
                     ok = banFile.addRegistry(oc.getIp(), oc.getDate());
-
-                if(ok)
+                }
+                
+                if(ok){
                     ok = toSendFile.addRegistry(oc.getIp(), oc.getDate());
+                }
             }
-        
+        }
         if(ok)
             state = RE_ALLOW_IPS;
         else{            
@@ -485,9 +469,15 @@ public class SSH extends MyAgent{
         String reason = "";
         
         //Re-allowing IPs
-        while(content_re_allow.size() > 0 && ok){            
-            String cmd = "/sbin/iptables -D INPUT -s "+content_re_allow.get(0).get(0)+" -j DROP";
-            Process pb = Runtime.getRuntime().exec(cmd);
+        while(content_re_allow.size() > 0 && ok){
+            if(OS.contains("linux")){
+                String cmd = "/sbin/iptables -D INPUT -s "+content_re_allow.get(0).get(0)+" -j DROP";
+                Process pb = Runtime.getRuntime().exec(cmd);
+            }else if(OS.contains("windows")){
+                String cmd = "netsh advfirewall firewall delete rule name="+content_re_allow.get(0).get(0)+" remoteip="+content_re_allow.get(0).get(0)+"\"";
+                Process pb = Runtime.getRuntime().exec(cmd);
+            }
+            
             
             ok = re_allow_ips.deleteIndex(0);
             
@@ -534,8 +524,15 @@ public class SSH extends MyAgent{
         String reason = "";
         
         while(content.size() > 0 && ok){
-            String cmd = "/sbin/iptables -I INPUT -s "+content.get(0).get(0)+" -j DROP";
-            Process pb = Runtime.getRuntime().exec(cmd);
+            
+            if(OS.contains("linux")){
+                String cmd = "/sbin/iptables -I INPUT -s "+content.get(0).get(0)+" -j DROP";
+                Process pb = Runtime.getRuntime().exec(cmd);
+            }else if(OS.contains("windows")){
+                String cmd = "netsh advfirewall firewall add rule name="+content.get(0).get(0)+" dir=in remoteip="+content.get(0).get(0)+" action=block";
+                Process pb = Runtime.getRuntime().exec(cmd);
+            }
+            
             
             //Now we add the IP to the re-allow file 
             ok = re_allow_ips.addIP(content.get(0).get(0));
@@ -576,6 +573,16 @@ public class SSH extends MyAgent{
         JsonArray vector = new JsonArray();
         JsonArray dates;
         
+        
+        JsonObject Stix = new JsonObject();
+        
+        Stix.add("spec_version", "2.0");
+        Stix.add("type", "attack-pattern");
+        Stix.add("id", "attack-pattern--ddos--attack--from--ssh");
+        Stix.add("created", "2019-02-10T12:11:04.983Z");
+        Stix.add("modified", "2019-02-10T12:11:04.983Z");
+        
+        
         //We just send a message to the server agent if we have IPs to send
         if(content.size()>0){
             
@@ -596,6 +603,8 @@ public class SSH extends MyAgent{
             }
 
             message.add("SSH IP attackers", vector);
+            message.add("STIX",Stix);
+            
             this.replyWithServer = this.generateReplyId();
 
             //Sending the message
@@ -683,6 +692,8 @@ public class SSH extends MyAgent{
         String ip;
         JsonObject message = new JsonObject();
         ArrayList <String> ips = new ArrayList();
+        
+        JsonValue Stix= contentMessageReceived.get("STIX");
         
         //First we analyze the message and extract the IPs
         if(!contentMessageReceived.names().contains("block IPs")){
@@ -773,8 +784,13 @@ public class SSH extends MyAgent{
             
             for(int i = 0; i < ips.size() && ok; i++){
                 if(!reallowFile.isIP(ips.get(i))){
-                    String cmd = "/sbin/iptables -I INPUT -s "+ips.get(i)+" -j DROP";
-                    Process pb = Runtime.getRuntime().exec(cmd);
+                    if(OS.contains("linux")){
+                        String cmd = "/sbin/iptables -I INPUT -s "+ips.get(i)+" -j DROP";
+                        Process pb = Runtime.getRuntime().exec(cmd);
+                    }else if(OS.contains("windows")){
+                        String cmd = "netsh advfirewall firewall add rule name="+ips.get(i)+" dir=in remoteip="+ips.get(i)+" action=block";
+                        Process pb = Runtime.getRuntime().exec(cmd);
+                    }
                 }
                 else{
                     ok = reallowFile.deleteIP(ips.get(i));
@@ -870,5 +886,53 @@ public class SSH extends MyAgent{
                 } catch (IOException e) {
                 }
         }
+    }
+    
+    private void setAuthlogfilename(String log){
+        this.authlogfilename=log;
+    }
+    
+    /**
+     * Check the OS and version for choose the log's location
+     * @param os Operative System
+     * @param version Version of operative System
+     * @return Log's location if OS is ok, otherwise return fail. 
+     */
+    public String checkOS(String os, String version){
+        String file="";
+        
+        //WINDOWS
+        if(os.indexOf("windows")!= -1){
+            if(version.indexOf("10")!= -1){
+                File possible_locationW=new File("C:\\ProgramData\\ssh\\logs\\sshd.log");
+                
+                if(possible_locationW.exists())
+                    file="C:\\ProgramData\\ssh\\logs\\sshd.log";
+                else
+                    file="fail";
+            }else{
+                file="fail";
+            }
+            
+        //LINUX
+        }else if(os.indexOf("linux")!= -1){
+            File possible_location1=new File("/var/log/auth.log");
+            
+            if(possible_location1.exists())            
+                file="/var/log/auth.log";
+            else{
+                File possible_location2=new File("/var/log/secure");
+                
+                if(possible_location2.exists())
+                    file="/var/log/secure";
+                else
+                    file="fail";
+            }
+                
+            
+        }else
+            file="fail";
+        
+        return file;
     }
 }

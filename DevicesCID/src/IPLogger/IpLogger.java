@@ -135,18 +135,19 @@ public class IpLogger {
 
                 writer.newLine();
             }
-
+            
             //Then, we rename the file
-            File file = new File(filename);
-            modified = tempFile.renameTo(file);
-
             writer.close();
+
+            File file = new File(filename);
+            modified = renameFile(auxFilename,filename);
+
         }
         catch(IOException e){
             System.err.println("ERROOOOOOORRRRR");
             modified = false;
         }
-        
+
         return modified;
     }
     
@@ -250,9 +251,7 @@ public class IpLogger {
         else{
             content.get(row).add(date);
         }
-        
         added = modifyContent(content);
-        
         return added;
     }
     
@@ -285,5 +284,37 @@ public class IpLogger {
             ip = content.get(index).get(0);
         
         return ip;
+    }
+    
+    /**
+     * Rename the file
+     * Reference: https://stackoverflow.com/questions/1000183/reliable-file-renameto-alternative-on-windows
+     * @param oldName Old file
+     * @param newName File to rename
+     * @return boolean, returns true if the renaming succeeded, else false.
+     */
+    
+    public static boolean renameFile(String oldName, String newName) throws IOException {
+        File srcFile = new File(oldName);
+        boolean bSucceeded = false;
+        
+        try {
+            File destFile = new File(newName);
+            if (destFile.exists()) {
+                if (!destFile.delete()) {
+                    throw new IOException(oldName + " was not successfully renamed to " + newName); 
+                }
+            }
+            if (!srcFile.renameTo(destFile))        {
+                throw new IOException(oldName + " was not successfully renamed to " + newName);
+            } else {
+                    bSucceeded = true;
+            }
+        } finally {
+              if (bSucceeded) {
+                    srcFile.delete();
+              }
+        }
+        return bSucceeded;
     }
 }

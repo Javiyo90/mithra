@@ -1,0 +1,9 @@
+{"date":"14/10/2018_18:48:42", "value":"Connect succesfull with Magentix Server in 192.168.1.134[5672] <test>"}
+{"date":"14/10/2018_18:48:43", "value":{"agent":"prueba", "content":{"status":"Starting"}}}
+{"date":"14/10/2018_18:48:43", "value":{"agent":"prueba", "content":{"status":"Executing"}}}
+{"date":"14/10/2018_18:48:44", "value":{"agent":"prueba", "content":{"status":"Subscribing successful with the server Localhost"}}}
+{"date":"14/10/2018_18:48:45", "value":{"agent":"prueba", "content":{"status":"Error creating the file tmp/tail_auth_log.tmp"}}}
+{"date":"14/10/2018_18:48:45", "value":{"agent":"prueba", "content":{"status":"The subscribe with the server Localhost has been successfully cancelled"}}}
+{"date":"14/10/2018_18:48:45", "value":{"agent":"prueba", "content":{"status":"Ending"}}}
+{"date":"24/10/2018_19:10:32", "value":"Connect succesfull with Magentix Server in 192.168.1.134[5672] <test>"}
+{"date":"24/10/2018_19:10:33", "value":" *** Error creating agent "prueba""}
