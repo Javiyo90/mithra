@@ -1,7 +1,8 @@
 Se utilizará el IDE NetBeans para la creación de los proyectos y ejecutables (https://netbeans.org/downloads/).
+IMPORTANTE: el JDK usado es el 1.8.
 
 
-1) Descargamos como ZIP el repositorio CID de Github y lo descomprimimos.
+1) Descargamos como ZIP el repositorio mithra de Github y lo descomprimimos.
 
 	- Las carpetas ConfigFile, DiskLogger, MyAgent, onMessage, SubscribedAgent, DevicesCID y ServerCID de la carpeta descargada, son las de los proyectos que tendremos que crear, y contienen tanto los nombres de los paquetes del proyecto, como las respectivas clases que tiene cada paquete.
 
