@@ -190,8 +190,7 @@ public class OccurrencesSearch {
                                 }
 
                             }
-                                   
-                            
+                                     
                         }
                     }
                   

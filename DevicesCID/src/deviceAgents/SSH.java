@@ -898,7 +898,7 @@ public class SSH extends MyAgent{
      * @param version Version of operative System
      * @return Log's location if OS is ok, otherwise return fail. 
      */
-    public String checkOS(String os, String version){
+    private String checkOS(String os, String version){
         String file="";
         
         //WINDOWS
